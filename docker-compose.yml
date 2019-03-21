@@ -1,0 +1,59 @@
+version: '3.1'
+services:
+  client_web:
+    build: ./web_client
+    command: npm run serve
+    ports:
+      - "8081:8081"
+    depends_on:
+      - server
+      - mobile_user
+  server:
+    build: ./server
+    command: ./wait-for-it.sh && npm run test
+    volumes:
+        - data-volume:/usr/app/apk
+    ports:
+      - "8080:8080"
+    environment:
+      WAIT_HOSTS: db:3306
+    depends_on:
+      - db
+  db:
+    build:
+      context: ./server/db
+    command: --default-authentication-plugin=mysql_native_password
+    hostname: db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: samthol
+      MYSQL_USER: area
+      MYSQL_PASSWORD: areasecure
+    volumes:
+       - ./server/db:/docker-entrypoint-initdb.d
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    external_links:
+      - db
+    environment:
+     - PMA_ARBITRARY=1
+     - PHPMYADMIN_PORT=8099
+    restart: always
+    ports:
+     - 8099:80
+  serveo:
+       image: taichunmin/serveo:latest
+       tty: true
+       stdin_open: true
+       # see https://serveo.net/ for more options
+       command: "ssh -R area2019.serveo.net:80:server:8080 -o \"StrictHostKeyChecking no\" serveo.net"
+       depends_on:
+           - server
+  mobile_user:
+      build: ./area_app
+      volumes:
+      - data-volume:/home/area_app/apk
+volumes:
+  data-volume:

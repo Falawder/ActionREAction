@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "5912c47d-7e67-47be-81d3-f9188b87d3e3",
+		"name": "Area_Thomas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/sign",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstname\":\"thomas\",\n\"lastname\":\"tleveque\",\n\"email\":\"tleveque97@gmail.com\",\n\"password\":\"samthol\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/sign",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/log?method=app",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstname\":\"thomas\",\n\"lastname\":\"tleveque\",\n\"email\":\"tleveque97@gmail.com\",\n\"password\":\"samthol\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/log?method=app",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"log"
+					],
+					"query": [
+						{
+							"key": "method",
+							"value": "app"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/slack/connect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"code\": \"528553590900.567355425043.eb5bf4e6b069437f8182c0fdd15e630c11fe5396d1af6786925b6f9adde00cd2\",\n\t\"token\": \"08415b99-7197-40a3-a33d-7d0f86b97ad1\"\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/slack/connect?",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"slack",
+						"connect"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "34fFs29kd09",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/spotify/connect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"AQB_-r18F9aXsfbaV96yPCNUdmCTnKq0L7k3YO7VoUazJ3mCr9PlDgsgLFz3LWAyoZ9mY07URLjiVmNJylVBVGiZLkDuMSI9uuOEMXNG4AICiBhyo98OcqAf5MpUMHefvMW3m91A1eRHvZ-ixb8ivV4LvU4OLtGAaWUCY_NcrgRbDkMYvCjl1Wmo-DuGnZEBloDVUw0JX53kytbjCamj5gLsboUrvape52EuwrRhILfY1gXXpeVCKuCr1mloR3IePwbYRbNCNG37luU_Axo7rPCbaLDTCkUFwZu3yeyIueJzIljEUnCbZR1HHNoRRd0\",\n    \"token\": \"2062c648-4f25-46c5-81a6-00e5aa038b39\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/spotify/connect?",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"spotify",
+						"connect"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "34fFs29kd09",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/parser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"2062c648-4f25-46c5-81a6-00e5aa038b39\",\n\t\"actiontitle\": \"timer\",\n\t\"action\": \"dayjob\",\n\t\"reactiontitle\": \"spotify\",\n\t\"reaction\": \"createplaylist\",\n\t\"arg\": {\n\t\t\"time\": \"*/3 * * * *\",\n\t\t\"name\" : \"playlistdefeu\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/parser",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/parser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"2062c648-4f25-46c5-81a6-00e5aa038b39\",\n\t\"actiontitle\": \"slack\",\n\t\"action\": \"slackupload\",\n\t\"reactiontitle\": \"google\",\n\t\"reaction\": \"googleuploadfile\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/parser",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/parser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"2062c648-4f25-46c5-81a6-00e5aa038b39\",\n\t\"actiontitle\": \"slack\",\n\t\"action\": \"slackreact\",\n\t\"reactiontitle\": \"google\",\n\t\"reaction\": \"sendmail\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/parser",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parser"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "55568179-c0e1-4a02-8645-8f905283ba8e",
+			"key": "token",
+			"value": "null",
+			"type": "string"
+		}
+	]
+}
