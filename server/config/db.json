@@ -1,0 +1,8 @@
+{
+	"mysql" : {
+		"host":"db", 
+		"user":"root", 
+		"password":"samthol", 
+		"database":"area"
+	}
+}

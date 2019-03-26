@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Client test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<h1>Client Test</h1>
+
+		<h2>Sign</h2>
+		<form method="post" action="http://localhost:8080/sign">
+			<br><p>Name</p>
+			<input type="text" name="firstname">
+			<br><p>LastName</p>
+			<input type="text" name="lastname">
+			<br><p>Email</p>
+			<input type="email" name="email">
+			<br><p>Password</p>
+			<input type="password" name="pass">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form><br>
+
+		<h2>Log</h2>
+		<form method="post" action="http://localhost:8080/log">
+			<p>Email</p>
+			<input type="email" name="user[email]">
+			<br><p>Password</p>
+			<input type="password" name="user[pass]">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form><br>
+
+		<h2>Log</h2>
+		<form method="post" action="http://localhost:8080/log">
+			<p>Email</p>
+			<input type="email" name="user[email]">
+			<br><p>Password</p>
+			<input type="password" name="user[pass]">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+		<br>
+		<h2>Log</h2>
+		<form method="post" action="http://localhost:8080/log?method=google">
+			<br><p>Email</p>
+			<input type="email" name="email">
+			<br><p>Token</p>
+			<input type="text" name="token">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+		<br>
+		<h2>Sign Network</h2>
+		<form method="post" action="http://localhost:8080/log?method=facebook">
+			<br><p>Name</p>
+			<input type="text" name="firstname">
+			<br><p>LastName</p>
+			<input type="text" name="lastname">
+			<br><p>Email</p>
+			<input type="email" name="email">
+			<br><p>Token</p>
+			<input type="text" name="token">
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+		<br>
+
+		<a name="token" href="http://localhost:8080/auth/facebook?queryParams=3a079384-ff19-453e-ab73-bafe9ddf4bc7">Login with Facebook</a>
+		<a name="token" href="http://localhost:8080/auth/google?queryParams=3a079384-ff19-453e-ab73-bafe9ddf4bc7">Login with Google</a>
+		<a name="token" href="http://localhost:8080/auth/github?queryParams=3a079384-ff19-453e-ab73-bafe9ddf4bc7">Login with Github</a>
+		<a name="token" href="http://localhost:8080/auth/instagram?queryParams=3a079384-ff19-453e-ab73-bafe9ddf4bc7">Login with Instagram</a>
+	</body>
+</html>

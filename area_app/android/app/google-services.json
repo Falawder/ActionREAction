@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "875424250894",
+    "firebase_url": "https://area-116b6.firebaseio.com",
+    "project_id": "area-116b6",
+    "storage_bucket": "area-116b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875424250894:android:4e36440dd0156696",
+        "android_client_info": {
+          "package_name": "ttpdm.area"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601970742952-69vn9312m3g0fd2otin5tp86njdhk1lf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe4bNFijuFgZG4_6TorW8zTOPXXdT5a4I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

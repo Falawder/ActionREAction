@@ -1,0 +1,10 @@
+{
+	"services": ["facebook", "google", "slack", "spotify", "discord", "github", "instagram"],
+	"fbAuth": {
+		"clientId": "250440079186311",
+		"clientSecret": "250440079186311",
+		"callbackUrlWeb": "http://localhost:8080/auth/facebook/callback",
+		"callbackUrlMobile": "http://localhost:8080/facebook"
+	}
+}
+
